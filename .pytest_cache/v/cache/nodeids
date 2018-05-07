@@ -1,0 +1,8 @@
+[
+  "test_ex1.py::test_add_two_numbers",
+  "test_ex1.py::test_subtract_two_numbers",
+  "test_ex1.py::test_multiply",
+  "test_ex1.py::test_divide",
+  "test_ex1.py::test_calc_ascii_val_of_string",
+  "test_ex1.py::test_length_guesser"
+]
