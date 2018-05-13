@@ -1,3 +1,13 @@
+#!/usr/bin/env python3
+
+"""
+    Ex1.py - Solution of the three problems from the first sensor workshop lab
+    author: Nayeem Aquib
+    date: 05/10/2018
+    email: nayeemaquib@bennington.edu
+
+"""
+
 # Problem 1
 
 def add_two_numbers(num1, num2):

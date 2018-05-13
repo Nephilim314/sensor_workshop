@@ -1,3 +1,14 @@
+#!/usr/bin/env python3
+
+"""
+    test_ex1.py - Test program using the py.test module to test the functions from Ex1.py
+    author: Nayeem Aquib
+    date: 05/10/2018
+    email: nayeemaquib@bennington.edu
+
+"""
+
+
 import Ex1
 
 def test_add_two_numbers():
