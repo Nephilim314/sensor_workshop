@@ -16,11 +16,17 @@ def add_two_numbers(num1, num2):
 def subtract_two_numbers(num1, num2):
     return num1 - num2
 
+
 def multiply(num, times):
-    res = num
-    for i in range(1, times):
-        res += num
+    res = 0
+    while num > 0:
+        if num % 2 == 1:
+            res += times
+        times = times << 1
+        num = num >> 1
     return res
+
+print(multiply(10, 100))
 
 def divide(num, times):
     res = 0
