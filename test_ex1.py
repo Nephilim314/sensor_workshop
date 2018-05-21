@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-    test_ex1.py - Test program using the py.test module to test the functions from Ex1.py
+    test_ex1.py - Test program using the py.test module to test the functions from Ex1.pye
     author: Nayeem Aquib
     date: 05/10/2018
     email: nayeemaquib@bennington.edu

@@ -18,23 +18,31 @@ def subtract_two_numbers(num1, num2):
 
 
 def multiply(num, times):
-    res = 0
-    while num > 0:
-        if num % 2 == 1:
-            res += times
-        times = times << 1
-        num = num >> 1
-    return res
+    if not isinstance(num and times, int):
+        raise TypeError("Int only, bud!")
+    else:
+        res = 0
+        while num > 0:
+            if num % 2 == 1:
+                res += times
+            times = times << 1
+            num = num >> 1
+        return res
 
-print(multiply(10, 100))
+print(multiply(10, 'a'))
 
 def divide(num, times):
-    res = 0
-    while num > 0:
-        num -= times
-        if num >= 0:
-            res += 1
-    return res
+    try:
+        res = 0
+        while num > 0:
+            num -= times
+            if num >= 0:
+                res += 1
+        return res
+    except TypeError as e:
+        print(e)
+
+print(divide(100, 'ask'))
 
 # Problem 2
 
@@ -54,3 +62,8 @@ def length_guesser(my_string, my_length_guess):
         return 1
     if len(my_string) < my_length_guess:
         return -1
+
+# def main():
+#     assert multiply(4, 5)==28
+#
+# print(main())
