@@ -49,10 +49,13 @@ def get_reading():
 		new_block.append(hex(i))
 	return new_block
 
+
+#print(type(get_reading()))
+
 def convert_temperature_reading(t_msb, t_lsb, mode='c'):
 	t_msb = t_msb << 8
 	raw_temperature = t_msb | t_lsb
-	print("Temperature"+hex(raw_temperature))
+#	print("Temperature"+hex(raw_temperature))
 	temp_f = -49 + 315*(raw_temperature/(2**16-1))
 	temp_c = -45 + 175*(raw_temperature/(2**16-1))
 	if mode=='c':
@@ -63,25 +66,26 @@ def convert_temperature_reading(t_msb, t_lsb, mode='c'):
 def convert_humidity_reading(h_msb, h_lsb):
 	h_msb = h_msb << 8
 	raw_humidity = h_msb | h_lsb
-	print("Humidity"+hex(raw_humidity))
+#	print("Humidity"+hex(raw_humidity))
 	humidity = 100 * (raw_humidity/(2**16-1))
 	return humidity
 
 a_t_c = convert_temperature_reading(0x5f, 0xe6, mode='c')
 b_t_c = convert_temperature_reading(0x5f, 0xf6, mode='c')
 c_t_c = convert_temperature_reading(0x5f, 0x4e, mode='c')
-print(a_t_c, b_t_c, c_t_c)
-
+#print(type(a_t_c))
+#print(a_t_c)
 a_t_f = convert_temperature_reading(0x5f, 0xe6, mode='f')
 b_t_f = convert_temperature_reading(0x5f, 0xf6, mode='f')
 c_t_f = convert_temperature_reading(0x5f, 0x4e, mode='f')
-print(a_t_f, b_t_f, c_t_f)
+#print(a_t_f, b_t_f, c_t_f)
 
 a_h = convert_humidity_reading(0x77, 0x8a)
 b_h = convert_humidity_reading(0x76, 0xdf)
 c_h = convert_humidity_reading(0x78, 0x20)
-print(a_h, b_h, c_h)
-
+#print(a_h, b_h, c_h)
+#print(type(a_h))
+#print(a_h)
 #for x in range(0, 10):
 #	led_on()
 #	time.sleep(0.25)
